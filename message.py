@@ -7,11 +7,11 @@ from linebot.models import *
 def imagemap_message():
     message = ImagemapSendMessage(
         base_url="https://i.imgur.com/BfTFVDN.jpg",
-        alt_text='最新的合作廠商有誰呢？',
+        alt_text='一圖多點',
         base_size=BaseSize(height=2000, width=2000),
         actions=[
             URIImagemapAction(
-                #家樂福
+                #第一張
                 link_uri="https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F",
                 area=ImagemapArea(
                     x=0, y=0, width=1000, height=1000
@@ -170,38 +170,38 @@ def Carousel_Template():
     )
     return message
 
-#TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
+#TemplateSendMessage - ImageCarouselTemplate(圖片集)
 def image_carousel_message1():
     message = TemplateSendMessage(
-        alt_text='圖片旋轉木馬',
+        alt_text='大大圖集',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/uKYgfVs.jpg",
+                    image_url="https://lh3.googleusercontent.com/pw/AP1GczPXhER4JCLcoc4zQU0UGKp-XOIvC6sp88CmNJfLYkTCiDVdG4aXuUI1-gsMBWKjZ6Z7ZITroTtdtRfuhkg-Hws8wnf_AiiP3f4voWTwy8Dcx7cMZQoY_0XAzJb3PkHeI6ZmOd-Z0jtQwcbat7T8QPFgOA=w559-h993-s-no-gm?authuser=0",
                     action=URITemplateAction(
-                        label="新鮮水果",
-                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                        label="大大雙下巴",
+                        uri="https://lh3.googleusercontent.com/pw/AP1GczPXhER4JCLcoc4zQU0UGKp-XOIvC6sp88CmNJfLYkTCiDVdG4aXuUI1-gsMBWKjZ6Z7ZITroTtdtRfuhkg-Hws8wnf_AiiP3f4voWTwy8Dcx7cMZQoY_0XAzJb3PkHeI6ZmOd-Z0jtQwcbat7T8QPFgOA=w559-h993-s-no-gm?authuser=0"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QOcAvjt.jpg",
+                    image_url="https://lh3.googleusercontent.com/pw/AP1GczPKjK3nCpwKbgh-PWOpgUo0zpLXwlfrw27_2jCZC12P8GGjpIT-EdLIifFSzANi6D8q1_YIZubMzAQEM4m9sZ3gM0iA-lu3K62MatK1DyVz-yoj0VuJ1O-XvQEJN1wXP5CLRUwV4z7Bmd7Ey07xzJfr-Q=w559-h993-s-no-gm?authuser=0",
                     action=URITemplateAction(
-                        label="新鮮蔬菜",
-                        uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
+                        label="大大求你了",
+                        uri="https://lh3.googleusercontent.com/pw/AP1GczPKjK3nCpwKbgh-PWOpgUo0zpLXwlfrw27_2jCZC12P8GGjpIT-EdLIifFSzANi6D8q1_YIZubMzAQEM4m9sZ3gM0iA-lu3K62MatK1DyVz-yoj0VuJ1O-XvQEJN1wXP5CLRUwV4z7Bmd7Ey07xzJfr-Q=w559-h993-s-no-gm?authuser=0"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    image_url="https://lh3.googleusercontent.com/pw/AP1GczOiEjLb-Cf7p9K4h0cYbKgOZWs-PDTG8rz8Lok2gWORsph55FkkLWixcLKXPHv_igtCFZCLMzZRuHGv1PTbcAlf7m2yNQSWVZ8tNwnd3GG0MfK6chEGSKtoXf_Ol2wIskP9gCi6K_kKsg8oaFj4umX88g=w559-h993-s-no-gm?authuser=0",
                     action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="大大和他的好麻吉",
+                        uri="https://lh3.googleusercontent.com/pw/AP1GczOiEjLb-Cf7p9K4h0cYbKgOZWs-PDTG8rz8Lok2gWORsph55FkkLWixcLKXPHv_igtCFZCLMzZRuHGv1PTbcAlf7m2yNQSWVZ8tNwnd3GG0MfK6chEGSKtoXf_Ol2wIskP9gCi6K_kKsg8oaFj4umX88g=w559-h993-s-no-gm?authuser=0"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    image_url="https://lh3.googleusercontent.com/pw/AP1GczM5w0S9LnN-NW_tutzhD9pFk9wBJhdlNxZ_7u3xQNNl22Bw2pYOUF_t4JAJHH-njg9cBF31k8gdB2QQU47T8G9VQ2s_Pz28yvs5LO1YI-oa2YZmPXqVRXEX4m6-1Ly4bNik6sOjyWlW7zWXd3ZW_gQ0VQ=w559-h993-s-no-gm?authuser=0",
                     action=URITemplateAction(
-                        label="可愛貓咪",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        label="大大好友",
+                        uri="https://lh3.googleusercontent.com/pw/AP1GczM5w0S9LnN-NW_tutzhD9pFk9wBJhdlNxZ_7u3xQNNl22Bw2pYOUF_t4JAJHH-njg9cBF31k8gdB2QQU47T8G9VQ2s_Pz28yvs5LO1YI-oa2YZmPXqVRXEX4m6-1Ly4bNik6sOjyWlW7zWXd3ZW_gQ0VQ=w559-h993-s-no-gm?authuser=0"
                     )
                 )
             ]
