@@ -49,7 +49,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    if '連拍' in msg:
+    if '大海報' in msg:
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '最新訊息' in msg:
@@ -61,7 +61,7 @@ def handle_message(event):
     elif '多模板' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '畫廊' in msg:
+    elif '寫真' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     elif '功能列表' in msg:
