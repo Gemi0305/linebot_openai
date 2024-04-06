@@ -62,11 +62,14 @@ def handle_message(event):
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '寫真' in msg:
-        message = test()
+        message = image_carousel_message1()
         line_bot_api.reply_message(event.reply_token, message)
     elif '功能列表' in msg:
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '生日快樂' in msg:
+        message = TextSendMessage(text="https://youtu.be/_yf9j-8G2fk")
+        line_bot_api.reply_message(event.reply_token, message)   
     elif '誰最帥' in msg:
         message = TextSendMessage(text="爸爸最帥!")
         line_bot_api.reply_message(event.reply_token, message)
