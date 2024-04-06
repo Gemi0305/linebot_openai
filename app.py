@@ -49,24 +49,38 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    if '最新合作廠商' in msg:
+    if '連拍' in msg:
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '最新活動訊息' in msg:
+    elif '最新訊息' in msg:
         message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '註冊會員' in msg:
+    elif '問我' in msg:
         message = Confirm_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '旋轉木馬' in msg:
+    elif '多模板' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '圖片畫廊' in msg:
+    elif '畫廊' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     elif '功能列表' in msg:
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '誰最帥' in msg:
+        line_bot_api.reply_message(event.reply_token, '爸爸最帥!')
+    elif '幾點' in msg:
+        line_bot_api.reply_message(event.reply_token, '歡樂100點!') 
+    elif '在嗎' in msg:
+        line_bot_api.reply_message(event.reply_token, '找我?')
+    elif '大大' in msg:
+        line_bot_api.reply_message(event.reply_token, '叫我?')     
+    elif '你很吵' in msg:
+        line_bot_api.reply_message(event.reply_token, '...') 
+    elif '晚安' in msg:
+        line_bot_api.reply_message(event.reply_token, '晚安~')
+    elif '早安' in msg:
+        line_bot_api.reply_message(event.reply_token, '早，要找我吃早餐嗎?')    
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
