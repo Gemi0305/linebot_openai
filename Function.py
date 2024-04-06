@@ -17,51 +17,6 @@ def function_list():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkl5qgGtBxZbBu921rynn7HN7C7JaD_Hbi5cMMV5gEgQu2mE-rIw',
-                    title='Maso萬事屋百貨',
-                    text='百萬種商品一站購足',
-                    actions=[
-                        MessageTemplateAction(
-                            label='關於Maso百貨',
-                            text='Maso萬事屋百貨是什麼呢？'
-                        ),
-                        URITemplateAction(
-                            label='點我逛百貨',
-                            uri='https://tw.shop.com/maso0310'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://www.youtaker.com/video2015/promo/images/promo-vip.png',
-                    title='註冊成為會員',
-                    text='免費獲得會員好康！',
-                    actions=[
-                        MessageTemplateAction(
-                            label='會員優惠資訊',
-                            text='我想瞭解註冊會員的好處是什麼'
-                        ),
-                        URITemplateAction(
-                            label='點我註冊會員',
-                            uri='https://tw.shop.com/nbts/create-myaccount.xhtml?returnurl=https%3A%2F%2Ftw.shop.com%2F'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://img.shop.com/Image/Images/11module/MABrands/opc3Chews_usa_32979_LogoTreatment_200x75.svg',
-                    title='獨家商品',
-                    text='百種優質獨家商品',
-                    actions=[
-                        MessageTemplateAction(
-                            label='點我看產品目錄',
-                            text='獨家商品有哪些？'
-                        ),
-                        URITemplateAction(
-                            label='購買獨家品牌',
-                            uri='https://tw.shop.com/info/our-brands'
-                        )
-                    ]
-                ),
-                CarouselColumn(
                     thumbnail_image_url='https://img.shop.com/Image/featuredhotdeal/GOMAJI1551245496503.jpg',
                     title='優惠資訊',
                     text='隨時更新最新優惠',
@@ -118,36 +73,6 @@ def function_list():
                         URITemplateAction(
                             label='查詢夥伴商店',
                             uri='https://tw.shop.com/stores-a-z'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://img.shop.com/Image/Images/landingPages/ps-recruit/twn-ps-recruit-header.jpg',
-                    title='招商說明',
-                    text='與Shop.com合作',
-                    actions=[
-                        MessageTemplateAction(
-                            label='招商資訊',
-                            text='如何成為夥伴商店'
-                        ),
-                        URITemplateAction(
-                            label='招商說明報名頁面',
-                            uri='https://tw.shop.com/ps_recruit_intro-v.xhtml?tkr=180530162209'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://images.marketamerica.com/site/br/images/logos/awards/torch-award-ethics-2018.jpg',
-                    title='微型創業資訊',
-                    text='加入網路微型創業趨勢',
-                    actions=[
-                        MessageTemplateAction(
-                            label='瞭解更多',
-                            text='什麼是微型創業資訊'
-                        ),
-                        URITemplateAction(
-                            label='公司簡介',
-                            uri='https://www.marketamerica.com/?localeCode=zh-Hant&redirect=true'
                         )
                     ]
                 ),
