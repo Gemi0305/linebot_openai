@@ -68,19 +68,23 @@ def handle_message(event):
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
     elif '誰最帥' in msg:
-        line_bot_api.reply_message(event.reply_token, '爸爸最帥!')
+        line_bot_api.reply_message(event.reply_token, "爸爸最帥!")
     elif '幾點' in msg:
-        line_bot_api.reply_message(event.reply_token, '歡樂100點!') 
+        line_bot_api.reply_message(event.reply_token, "歡樂100點!") 
     elif '在嗎' in msg:
-        line_bot_api.reply_message(event.reply_token, '找我?')
+        line_bot_api.reply_message(event.reply_token, "找我?")
     elif '大大' in msg:
-        line_bot_api.reply_message(event.reply_token, '叫我?')     
+        line_bot_api.reply_message(event.reply_token, "幹嘛?")     
     elif '你很吵' in msg:
-        line_bot_api.reply_message(event.reply_token, '...') 
+        line_bot_api.reply_message(event.reply_token, "...") 
     elif '晚安' in msg:
-        line_bot_api.reply_message(event.reply_token, '晚安~')
+        line_bot_api.reply_message(event.reply_token, "晚安~")
     elif '早安' in msg:
-        line_bot_api.reply_message(event.reply_token, '早，要找我吃早餐嗎?')    
+        line_bot_api.reply_message(event.reply_token, "要找我吃早餐嗎?") 
+    elif '胖' in msg:
+        line_bot_api.reply_message(event.reply_token, "胖胖才可愛!")
+    elif '無聊' in msg:
+        line_bot_api.reply_message(event.reply_token, "無聊就去學習，像我一樣認真上進!")
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
