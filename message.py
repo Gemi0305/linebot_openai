@@ -54,7 +54,7 @@ def buttons_message():
     message = TemplateSendMessage(
         alt_text='最新消息',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://www.nthu.edu.tw//public/images/logo.png",
+            thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
             title="最新消息",
             text="點選下方連結或內容",
             actions=[
@@ -139,7 +139,7 @@ def Carousel_Template():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png',
+                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
                     title='關於我們',
                     text='關於我們',
                     actions=[
@@ -154,14 +154,18 @@ def Carousel_Template():
                         URITemplateAction(
                             label="學士班簡介",
                             uri="https://ipta.nthu.edu.tw/?page_id=8465"
-                        #),
-                        #URITemplateAction(
-                        #    label='學士班課程',
-                        #    uri='https://ipta.nthu.edu.tw/?page_id=8549'
-                        #),
-                        #URITemplateAction(
-                        #    label='藝術學院大樓',
-                        #    uri='https://ipta.nthu.edu.tw//?p=6607'
+                        ),
+                        URITemplateAction(
+                            label="學士班課程",
+                            uri="https://ipta.nthu.edu.tw/?page_id=8549"
+                        ),
+                        URITemplateAction(
+                            label="藝術學院大樓",
+                            uri="https://ipta.nthu.edu.tw//?p=6607"
+                        ),
+                        URITemplateAction(
+                            label="藝術學院學士班FB",
+                            uri="https://www.facebook.com/ipta.nthu/"                            
                         )
                     ]
                 )
