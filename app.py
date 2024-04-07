@@ -28,7 +28,7 @@ line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN'))
 # Channel Secret
 handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 
-line_bot_api.push_message(os.getenv('YOUR_USER_ID'), TextSendMessage(text='剛睡著了，有人找我?'))
+#line_bot_api.push_message(os.getenv('YOUR_USER_ID'), TextSendMessage(text='剛睡著了，有人找我?'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -59,7 +59,7 @@ def handle_message(event):
     elif '問我' in msg:
         message = Confirm_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '多模板' in msg:
+    elif '首頁' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '寫真' in msg:
