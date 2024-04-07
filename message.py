@@ -54,7 +54,7 @@ def buttons_message():
     message = TemplateSendMessage(
         alt_text='最新消息',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+            thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
             title="最新消息",
             text="點選下方連結或內容",
             actions=[
@@ -101,7 +101,7 @@ def Carousel_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png",
+                    thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
                     title='最新消息',
                     text='最新消息',
                     actions=[
@@ -112,7 +112,7 @@ def Carousel_Template():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuo7n2_HNSFuT3T7Z9PUZmn1SDM6G6-iXfRC3FxdGTj7X1Wr0RzA',
+                    thumbnail_image_url='https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg',
                     title='師資',
                     text='學士班師資',
                     actions=[
@@ -123,7 +123,7 @@ def Carousel_Template():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
                     title='關於我們',
                     text='學士班簡介',
                     actions=[
@@ -134,7 +134,7 @@ def Carousel_Template():
                     ]
                 ),    
                 CarouselColumn(
-                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
                     title='關於我們',
                     text='學士班課程',
                     actions=[
@@ -145,7 +145,7 @@ def Carousel_Template():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
                     title='關於我們',
                     text='藝術學院大樓',
                     actions=[
@@ -156,7 +156,7 @@ def Carousel_Template():
                     ]
                 ),
                CarouselColumn(
-                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    thumbnail_image_url="https://sis.hbs.mybluehost.me/wp-content/uploads/2023/03/Gesture-scaled-e1677769564714.jpg",
                     title='關於我們',
                     text='藝術學院學士班FB',
                     actions=[
