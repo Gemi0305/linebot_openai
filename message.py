@@ -52,27 +52,19 @@ def imagemap_message():
 #TemplateSendMessage - ButtonsTemplate (按鈕介面訊息)
 def buttons_message():
     message = TemplateSendMessage(
-        alt_text='好消息來囉～',
+        alt_text='最新消息',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
-            title="是否要進行抽獎活動？",
-            text="輸入生日後即獲得抽獎機會",
+            thumbnail_image_url="https://i0.wp.com/sis.hbs.mybluehost.me/wp-content/uploads/2023/03/NthuTextLogo.png",
+            title="最新消息",
+            text="點選下方連結或內容",
             actions=[
-                DatetimePickerTemplateAction(
-                    label="請選擇生日",
-                    data="input_birthday",
-                    mode='date',
-                    initial='1990-01-01',
-                    max='2019-03-10',
-                    min='1930-01-01'
-                ),
-                MessageTemplateAction(
-                    label="看抽獎品項",
-                    text="有哪些抽獎品項呢？"
-                ),
+                #MessageTemplateAction(
+                #    label="看抽獎品項",
+                #    text="有哪些抽獎品項呢？"
+                #),
                 URITemplateAction(
-                    label="免費註冊享回饋",
-                    uri="https://tw.shop.com/nbts/create-myaccount.xhtml?returnurl=https%3A%2F%2Ftw.shop.com%2F"
+                    label="最新消息",
+                    uri="https://ipta.nthu.edu.tw/?page_id=5862"
                 )
             ]
         )
