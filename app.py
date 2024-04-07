@@ -53,7 +53,7 @@ def handle_message(event):
     if '大海報' in msg:
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '最新訊息' in msg:
+    elif '最新消息' in msg:
         message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '問我' in msg:
