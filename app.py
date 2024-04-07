@@ -98,6 +98,18 @@ def handle_message(event):
     elif '無聊' in msg:
         message = TextSendMessage(text="無聊就去學習，像我一樣認真上進!")
         line_bot_api.reply_message(event.reply_token, message)
+    elif 'OK' in msg:
+        message = StickerSendMessage(
+            package_id = '6370',
+            sticker_id = '11088016'
+        )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '讚' in msg:
+        message = StickerSendMessage(
+            package_id = '11538',
+            sticker_id = '51626501'
+        )
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
