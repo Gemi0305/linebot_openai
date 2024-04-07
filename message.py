@@ -54,7 +54,7 @@ def buttons_message():
     message = TemplateSendMessage(
         alt_text='最新消息',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://i0.wp.com/sis.hbs.mybluehost.me/wp-content/uploads/2023/03/NthuTextLogo.png",
+            thumbnail_image_url="https://www.nthu.edu.tw//public/images/logo.png",
             title="最新消息",
             text="點選下方連結或內容",
             actions=[
@@ -97,63 +97,71 @@ def Confirm_Template():
 
 def Carousel_Template():
     message = TemplateSendMessage(
-        alt_text='一則旋轉木馬按鈕訊息',
+        alt_text='首頁',
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
                     thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png',
-                    title='這是第一塊模板',
-                    text='一個模板可以有三個按鈕',
+                    title='最新消息',
+                    text='最新消息',
                     actions=[
-                        PostbackTemplateAction(
-                            label='回傳一個訊息',
-                            data='將這個訊息偷偷回傳給機器人'
-                        ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是1'
-                        ),
+                        #PostbackTemplateAction(
+                        #    label='回傳一個訊息',
+                        #    data='將這個訊息偷偷回傳給機器人'
+                        #),
+                        #MessageTemplateAction(
+                        #    label='用戶發送訊息',
+                        #    text='我知道這是1'
+                        #),
                         URITemplateAction(
-                            label='進入1的網頁',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png'
+                            label='進入頁面',
+                            uri='https://ipta.nthu.edu.tw/?page_id=5862'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuo7n2_HNSFuT3T7Z9PUZmn1SDM6G6-iXfRC3FxdGTj7X1Wr0RzA',
-                    title='這是第二塊模板',
-                    text='副標題可以自己改',
+                    title='師資',
+                    text='師資',
                     actions=[
-                        PostbackTemplateAction(
-                            label='回傳一個訊息',
-                            data='這是ID=2'
-                        ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是2'
-                        ),
+                        #PostbackTemplateAction(
+                        #    label='回傳一個訊息',
+                        #    data='這是ID=2'
+                        #),
+                        #MessageTemplateAction(
+                        #    label='用戶發送訊息',
+                        #    text='我知道這是2'
+                        #),
                         URITemplateAction(
-                            label='進入2的網頁',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                            label='進入頁面',
+                            uri='https://ipta.nthu.edu.tw/?page_id=9366'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png',
-                    title='這是第三個模塊',
-                    text='最多可以放十個',
+                    title='關於我們',
+                    text='關於我們',
                     actions=[
-                        PostbackTemplateAction(
-                            label='回傳一個訊息',
-                            data='這是ID=3'
-                        ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是3'
+                        #PostbackTemplateAction(
+                        #    label='回傳一個訊息',
+                        #    data='這是ID=3'
+                        #),
+                        #MessageTemplateAction(
+                        #    label='用戶發送訊息',
+                        #    text='我知道這是3'
+                        #),
+                        URITemplateAction(
+                            label='學士班簡介',
+                            uri='https://ipta.nthu.edu.tw/?page_id=8465'
                         ),
                         URITemplateAction(
-                            label='uri2',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png'
+                            label='學士班課程',
+                            uri='https://ipta.nthu.edu.tw/?page_id=8549'
+                        ),
+                        URITemplateAction(
+                            label='藝術學院大樓',
+                            uri='https://ipta.nthu.edu.tw//?p=6607'
                         )
                     ]
                 )
