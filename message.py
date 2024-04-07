@@ -105,14 +105,6 @@ def Carousel_Template():
                     title='最新消息',
                     text='最新消息',
                     actions=[
-                        #PostbackTemplateAction(
-                        #    label='回傳一個訊息',
-                        #    data='將這個訊息偷偷回傳給機器人'
-                        #),
-                        #MessageTemplateAction(
-                        #    label='用戶發送訊息',
-                        #    text='我知道這是1'
-                        #),
                         URITemplateAction(
                             label="進入頁面",
                             uri="https://ipta.nthu.edu.tw/?page_id=5862"
@@ -122,16 +114,8 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuo7n2_HNSFuT3T7Z9PUZmn1SDM6G6-iXfRC3FxdGTj7X1Wr0RzA',
                     title='師資',
-                    text='師資',
+                    text='學士班師資',
                     actions=[
-                        #PostbackTemplateAction(
-                        #    label='回傳一個訊息',
-                        #    data='這是ID=2'
-                        #),
-                        #MessageTemplateAction(
-                        #    label='用戶發送訊息',
-                        #    text='我知道這是2'
-                        #),
                         URITemplateAction(
                             label="進入頁面",
                             uri="https://ipta.nthu.edu.tw/?page_id=9366"
@@ -141,34 +125,47 @@ def Carousel_Template():
                 CarouselColumn(
                     thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
                     title='關於我們',
-                    text='關於我們',
+                    text='學士班簡介',
                     actions=[
-                        #PostbackTemplateAction(
-                        #    label='回傳一個訊息',
-                        #    data='這是ID=3'
-                        #),
-                        #MessageTemplateAction(
-                        #    label='用戶發送訊息',
-                        #    text='我知道這是3'
-                        #),
                         URITemplateAction(
-                            label="學士班簡介",
+                            label="進入頁面",
                             uri="https://ipta.nthu.edu.tw/?page_id=8465"
-                        ),
-                        URITemplateAction(
-                            label="學士班課程",
-                            uri="https://ipta.nthu.edu.tw/?page_id=8549"
-                        #),
-                        #URITemplateAction(
-                        #    label="藝術學院大樓",
-                        #    uri="https://ipta.nthu.edu.tw//?p=6607"
-                        #),
-                        #URITemplateAction(
-                        #    label="藝術學院學士班FB",
-                        #    uri="https://www.facebook.com/ipta.nthu/"                            
                         )
                     ]
-                )
+                ),    
+                CarouselColumn(
+                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    title='關於我們',
+                    text='學士班課程',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://ipta.nthu.edu.tw/?page_id=8549"
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    title='關於我們',
+                    text='藝術學院大樓',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://ipta.nthu.edu.tw//?p=6607"
+                        )
+                    ]
+                ),
+               CarouselColumn(
+                    thumbnail_image_url="https://www.nthu.edu.tw//public/images/footer-logo.png",
+                    title='關於我們',
+                    text='藝術學院學士班FB',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://www.facebook.com/ipta.nthu"
+                        )
+                    ]
+               )
             ]
         )
     )
