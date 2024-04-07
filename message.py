@@ -101,7 +101,7 @@ def Carousel_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png',
+                    thumbnail_image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png",
                     title='最新消息',
                     text='最新消息',
                     actions=[
@@ -114,8 +114,8 @@ def Carousel_Template():
                         #    text='我知道這是1'
                         #),
                         URITemplateAction(
-                            label='進入頁面',
-                            uri='https://ipta.nthu.edu.tw/?page_id=5862'
+                            label="進入頁面",
+                            uri="https://ipta.nthu.edu.tw/?page_id=5862"
                         )
                     ]
                 ),
@@ -133,8 +133,8 @@ def Carousel_Template():
                         #    text='我知道這是2'
                         #),
                         URITemplateAction(
-                            label='進入頁面',
-                            uri='https://ipta.nthu.edu.tw/?page_id=9366'
+                            label="進入頁面",
+                            uri="https://ipta.nthu.edu.tw/?page_id=9366"
                         )
                     ]
                 ),
@@ -152,16 +152,16 @@ def Carousel_Template():
                         #    text='我知道這是3'
                         #),
                         URITemplateAction(
-                            label='學士班簡介',
-                            uri='https://ipta.nthu.edu.tw/?page_id=8465'
-                        ),
-                        URITemplateAction(
-                            label='學士班課程',
-                            uri='https://ipta.nthu.edu.tw/?page_id=8549'
-                        ),
-                        URITemplateAction(
-                            label='藝術學院大樓',
-                            uri='https://ipta.nthu.edu.tw//?p=6607'
+                            label="學士班簡介",
+                            uri="https://ipta.nthu.edu.tw/?page_id=8465"
+                        #),
+                        #URITemplateAction(
+                        #    label='學士班課程',
+                        #    uri='https://ipta.nthu.edu.tw/?page_id=8549'
+                        #),
+                        #URITemplateAction(
+                        #    label='藝術學院大樓',
+                        #    uri='https://ipta.nthu.edu.tw//?p=6607'
                         )
                     ]
                 )
