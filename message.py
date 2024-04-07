@@ -158,14 +158,14 @@ def Carousel_Template():
                         URITemplateAction(
                             label="學士班課程",
                             uri="https://ipta.nthu.edu.tw/?page_id=8549"
-                        ),
-                        URITemplateAction(
-                            label="藝術學院大樓",
-                            uri="https://ipta.nthu.edu.tw//?p=6607"
-                        ),
-                        URITemplateAction(
-                            label="藝術學院學士班FB",
-                            uri="https://www.facebook.com/ipta.nthu/"                            
+                        #),
+                        #URITemplateAction(
+                        #    label="藝術學院大樓",
+                        #    uri="https://ipta.nthu.edu.tw//?p=6607"
+                        #),
+                        #URITemplateAction(
+                        #    label="藝術學院學士班FB",
+                        #    uri="https://www.facebook.com/ipta.nthu/"                            
                         )
                     ]
                 )
