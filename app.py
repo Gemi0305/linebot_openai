@@ -122,6 +122,14 @@ def handle_message(event):
     elif '@dcard' in msg:
         message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site:dcard.tw")
         line_bot_api.reply_message(event.reply_token, message) 
+    elif '@map 本部' in msg:
+        message = LocationSendMessage(
+            title='國立清華大學',
+            address='校本部',
+            latitude=24.801124352613876,
+            longitude=120.99680464703069
+        )
+        line_bot_api.reply_message(event.reply_token, message)  
     elif '@map' in msg:
         message = LocationSendMessage(
             title='國立清華大學',
@@ -130,13 +138,6 @@ def handle_message(event):
             longitude=120.96521624579945
         )
         line_bot_api.reply_message(event.reply_token, message) 
-        message = LocationSendMessage(
-            title='國立清華大學',
-            address='校本部',
-            latitude=24.801124352613876,
-            longitude=120.99680464703069
-        )
-        line_bot_api.reply_message(event.reply_token, message)  
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
