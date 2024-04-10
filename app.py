@@ -62,8 +62,7 @@ def handle_message(event):
     elif '問我' in msg:
         message = Confirm_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '首頁' in msg:
-    elif '導覽' in msg:
+    elif '首頁' in msg or '導覽' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '寫真' in msg:
