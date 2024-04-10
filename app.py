@@ -53,6 +53,9 @@ def handle_message(event):
     if '大海報' in msg:
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '@help' in msg:
+        message = TextSendMessage(text="呵呵呵")
+        line_bot_api.reply_message(event.reply_token, message)
     elif '最新消息' in msg:
         message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
@@ -60,6 +63,7 @@ def handle_message(event):
         message = Confirm_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '首頁' in msg:
+    elif '導覽' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '寫真' in msg:
@@ -114,11 +118,26 @@ def handle_message(event):
         message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)")
         line_bot_api.reply_message(event.reply_token, message) 
     elif '@ptt' in msg:
-        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site%3Aptt.cc")
+        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site:ptt.cc")
         line_bot_api.reply_message(event.reply_token, message)
     elif '@dcard' in msg:
-        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site%3Adcard.tw")
-        line_bot_api.reply_message(event.reply_token, message)    
+        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site:dcard.tw")
+        line_bot_api.reply_message(event.reply_token, message) 
+    elif '@map' in msg:
+        message = LocationSendMessage(
+            title='國立清華大學',
+            address='南大校區',
+            latitude=24.792743469350626,
+            longitude=120.96521624579945
+        )
+        line_bot_api.reply_message(event.reply_token, message) 
+        message = LocationSendMessage(
+            title='國立清華大學',
+            address='校本部',
+            latitude=24.801124352613876,
+            longitude=120.99680464703069
+        )
+        line_bot_api.reply_message(event.reply_token, message)  
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
