@@ -110,6 +110,15 @@ def handle_message(event):
             sticker_id = '51626501'
         )
         line_bot_api.reply_message(event.reply_token, message)
+    elif '@google' in msg:
+        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)")
+        line_bot_api.reply_message(event.reply_token, message) 
+    elif '@ptt' in msg:
+        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site%3Aptt.cc")
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '@dcard' in msg:
+        message = TextSendMessage(text="https://www.google.com/search?q=國立清華大學+藝術學院學士班(科技藝術組)+site%3Adcard.tw")
+        line_bot_api.reply_message(event.reply_token, message)    
     else:
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
