@@ -46,6 +46,39 @@ def callback():
     return 'OK'
 
 
+def Carousel_mlb():
+    message = TemplateSendMessage(
+        alt_text='首頁',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    thumbnail_image_url="https://images.ctfassets.net/iiozhi00a8lc/t119_header_primary119_wordmark_on_dark_svg/0d7c22af3db6cb3984368595627001e3/t119_header_primary.svg",
+                    title='洛杉磯道奇隊',
+                    text='洛杉磯道奇隊息',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://www.mlb.com/dodgers/"
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://www.mlbstatic.com/team-logos/team-cap-on-dark/147.svg',
+                    title='紐約洋基隊',
+                    text='紐約洋基隊',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://www.mlb.com/yankees/"
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+    return message
+
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -65,6 +98,9 @@ def handle_message(event):
     elif '首頁' in msg or '導覽' in msg:
         message = Carousel_Template()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '首頁' in msg or '大聯盟' in msg:
+        message = Carousel_mlb()
+        line_bot_api.reply_message(event.reply_token, message)    
     elif '寫真' in msg:
         message = image_carousel_message1()
         line_bot_api.reply_message(event.reply_token, message)
