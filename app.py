@@ -54,7 +54,7 @@ def Carousel_mlb():
                 CarouselColumn(
                     thumbnail_image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/LA_Dodgers.svg/500px-LA_Dodgers.svg.png",
                     title='洛杉磯道奇隊',
-                    text='洛杉磯道奇隊息',
+                    text='球隊官網',
                     actions=[
                         URITemplateAction(
                             label="進入頁面",
@@ -65,7 +65,7 @@ def Carousel_mlb():
                 CarouselColumn(
                     thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/NewYorkYankees_caplogo.svg/250px-NewYorkYankees_caplogo.svg.png',
                     title='紐約洋基隊',
-                    text='紐約洋基隊',
+                    text='球隊官網',
                     actions=[
                         URITemplateAction(
                             label="進入頁面",
@@ -78,7 +78,37 @@ def Carousel_mlb():
     )
     return message
 
-
+def Carousel_japan():
+    message = TemplateSendMessage(
+        alt_text='首頁',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    thumbnail_image_url="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hokkaido_Nippon-Ham_Fighters_insignia.png",
+                    title='北海道日本火腿鬥士隊',
+                    text='球隊官網',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://www.fighters.co.jp/global/taiwanese/"
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Hanshin_tigers_insignia.PNG/500px-Hanshin_tigers_insignia.PNG',
+                    title='阪神虎隊',
+                    text='球隊官網',
+                    actions=[
+                        URITemplateAction(
+                            label="進入頁面",
+                            uri="https://hanshintigers.jp/"
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+    return message
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -100,7 +130,10 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '首頁' in msg or '大聯盟' in msg:
         message = Carousel_mlb()
-        line_bot_api.reply_message(event.reply_token, message)    
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '首頁' in msg or '日本聯盟' in msg:
+        message = Carousel_japan()
+        line_bot_api.reply_message(event.reply_token, message)   
     elif '寫真' in msg:
         message = image_carousel_message1()
         line_bot_api.reply_message(event.reply_token, message)
