@@ -52,7 +52,7 @@ def Carousel_mlb():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url="https://images.ctfassets.net/iiozhi00a8lc/t119_header_primary119_wordmark_on_dark_svg/0d7c22af3db6cb3984368595627001e3/t119_header_primary.svg",
+                    thumbnail_image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/LA_Dodgers.svg/500px-LA_Dodgers.svg.png",
                     title='洛杉磯道奇隊',
                     text='洛杉磯道奇隊息',
                     actions=[
@@ -63,7 +63,7 @@ def Carousel_mlb():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://www.mlbstatic.com/team-logos/team-cap-on-dark/147.svg',
+                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/NewYorkYankees_caplogo.svg/250px-NewYorkYankees_caplogo.svg.png',
                     title='紐約洋基隊',
                     text='紐約洋基隊',
                     actions=[
